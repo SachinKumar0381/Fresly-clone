@@ -14,10 +14,11 @@ import {
   Box,
   SimpleGrid
 } from '@chakra-ui/react'
+import Navbar from '../Navbar';
 
 const MealCard = ({item}) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
-  return (
+  return (<>
     <div className='mCard' onClick={onOpen}>
         <div className='imgDiv'><img src={item.img_1} alt="" className='proImg'/></div>
         <h3 className='proHead'>{item.title}</h3>
@@ -81,7 +82,8 @@ const MealCard = ({item}) => {
           </ModalBody></div>
         </ModalContent>
       </Modal>
-    </div>
+      </div>
+      </>
   )
 }
 

@@ -10,10 +10,15 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
+import Navbar from "../../Components/Navbar"
+
 
 const HomePage = () => {
+
   return (
+
     <div>
+      <Navbar/>
       <SimpleGrid columns={[1, null, 2]}>
         <Box>
           <Image
@@ -262,6 +267,7 @@ const HomePage = () => {
           </Box>
         </SimpleGrid>
       </Box>
+
     </div>
   );
 };

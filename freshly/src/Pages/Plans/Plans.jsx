@@ -5,6 +5,7 @@ import { useState } from 'react';
 import MealCard from '../../Components/MealCard/MealCard';
 import "./plans.css";
 import axios from 'axios';
+import Navbar from "../../Components/Navbar"
 
 const Plans = () => {
   const [data,setData] = useState([]);
@@ -20,7 +21,9 @@ const Plans = () => {
   },[]);
   console.log(data)
   return (
+
     <div mt="65px">
+      <Navbar/>
       <Image src="https://assets-global.website-files.com/5d03b4e130118314af624b20/6192ce7669f68694a8b969af_Group%20(8).svg" alt="" margin="auto"/>
       <Heading>Flexible plans that fit your life</Heading>
       <p className='firstPara'>We offer anywhere from 4–12 meals per week, with meals as low as <span className='bold'>$9.58 each. The bigger your box, the more you’ll save</span>—and you can always pause or change your plan at any time.</p>

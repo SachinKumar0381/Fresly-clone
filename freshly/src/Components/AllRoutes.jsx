@@ -10,17 +10,13 @@ import Plans from "../Pages/Plans/Plans.jsx"
 
 
 
-
 const AllRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<HomePage/>} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/plans" element={<Plans/>} />
       <Route path="/cart" element={<Cart/>} />
       <Route path="/deliverydate" element={<DateDeliver/>} />
-      <Route path="/plans" element={<Plans/>} />
-      {/* <Route path="/payment" element={<Payment />} />
-      <Route path="/thankyou" element={<Thankyou />} /> */}
-      {/* <Route path="/plansandmenus" element={<MenuPlans />} /> */}
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/checkout" element={<Checkout/>} />
