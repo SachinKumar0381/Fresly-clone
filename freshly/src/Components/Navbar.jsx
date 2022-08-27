@@ -13,6 +13,7 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const NavLink = ({ children }) => (
     <Link
@@ -30,7 +31,7 @@ const NavLink = ({ children }) => (
 
 export default function Navbar() {
     const { isOpen, onOpen, onClose } = useDisclosure();
-
+    const navigate = useNavigate();
     return (
         <div style={{"z-index":"1", position :"sticky", top :"0"}}>
             <Box bg={useColorModeValue("rgb(255,253,247)")} px={4} w="100%">
@@ -42,8 +43,8 @@ export default function Navbar() {
                         display={{ md: "none" }}
                         onClick={isOpen ? onClose : onOpen}
                     />
-                    <Box>
-                        <Image w='110px' src="https://i.pcmag.com/imagery/reviews/03ma1UjS5TueJFtNVB4ElDn-8.fit_scale.size_1028x578.v1649255757.png" alt="logo" />
+                    <Box onClick={() => { navigate("/") }}>
+                        <Image w='110px' src="https://i.pcmag.com/imagery/reviews/03ma1UjS5TueJFtNVB4ElDn-8.fit_scale.size_1028x578.v1649255757.png" alt="logo"/>
                     </Box>
                     <HStack
                         as={"nav"}

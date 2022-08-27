@@ -4,9 +4,9 @@ import Login from "../Pages/Authentication/Login";
 import SignUp from "../Pages/Authentication/SignUp";
 import Cart from "../Pages/Cart/Cart";
 import Checkout from "../Pages/Checkout/Checkout";
-import DateDeliver from "../Pages/DateDelivery/DateDeliver";
 import HomePage from "../Pages/HomePage/HomePage";
 import Plans from "../Pages/Plans/Plans.jsx"
+import DateSelector from "../Pages/Cart/DataDelivery";
 
 
 
@@ -15,8 +15,8 @@ const AllRoutes = () => {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/plans" element={<Plans/>} />
-      <Route path="/cart" element={<Cart/>} />
-      <Route path="/deliverydate" element={<DateDeliver/>} />
+      <Route path="/cart" element={<Cart />} />
+      <Route path="/deliverydate" element={<DateSelector/>} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/checkout" element={<Checkout/>} />
